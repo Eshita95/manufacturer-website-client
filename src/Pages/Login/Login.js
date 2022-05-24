@@ -33,8 +33,10 @@ const Login = () => {
                                         value: true,
                                         message: 'Email is Required'
                                     },
-                                    pattern: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                    message: 'Provide a valid email'
+                                    pattern: {
+                                        value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                        message: 'Provide a valid email'
+                                    }
                                 })}
                             />
                             <label class="label">
@@ -43,14 +45,34 @@ const Login = () => {
 
                             </label>
                         </div>
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text">Password</span>
+                            </label>
+                            <input
+                                type="password"
+                                placeholder="Your Password"
+                                class="input input-bordered w-full max-w-xs"
+                                {...register("password", {
+                                    required: {
+                                        value: true,
+                                        message: 'password is Required'
+                                    },
+                                    minLength:{
+                                        value:6,
+                                        message:'Must be 6 characters or longer'
+                                    }
+                                    
+                                })}
+                            />
+                            <label class="label">
+                                {errors.password?.type === 'required' && <span className='label-text-alt text-red-500'>{errors.password.message}</span>}
+                                {errors.password?.type === 'pattern' && <span className='label-text-alt text-red-500'>{errors.password.message}</span>}
 
-                        <input />
-                        {errors.firstName?.type === 'required' && "First name is required"}
+                            </label>
+                        </div>
 
-                        <input {...register("lastName", { required: true })} />
-                        {errors.lastName && "Last name is required"}
-
-                        <input type="submit" />
+                        <input className='btn w-full max-w-xs text-white' type="submit" value="Login" />
                     </form>
                     <div className="divider">OR</div>
                     <button className="btn" onClick={() => signInWithGoogle()}>Continue with Google</button>
