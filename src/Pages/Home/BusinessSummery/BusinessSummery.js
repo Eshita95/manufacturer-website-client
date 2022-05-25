@@ -4,7 +4,7 @@ const BusinessSummery = () => {
     return (
         <div className='my-6 '>
             <div className='flex justify-center items-center'>
-                <h1 className='text-4xl font-bold'>Our Business Summery</h1>
+                <h1 className='text-4xl font-bold text-cyan-600'>Our Business Summery</h1>
             </div>
             <div className="stats shadow my-10 flex justify-center items-center">
 
