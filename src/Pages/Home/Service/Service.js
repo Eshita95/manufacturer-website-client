@@ -9,6 +9,8 @@ const Service = ({service}) => {
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Name: {service.name}</h2>
                 <p>Description: {service.description}</p>
+                <p>Quantity: {service.quantity}</p>
+                <p>Price: {service.price} per unit</p>
             </div>
         </div>
     );

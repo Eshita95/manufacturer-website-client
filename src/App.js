@@ -9,8 +9,6 @@ import SignUp from './Pages/Login/SignUp';
 import MyPortfolio from  './Pages/Home/MyPortfolio/Myportfolio'
 import NotFound from './Pages/NotFound/NotFound';
 
-
-
 function App() {
   return (
     <div>
