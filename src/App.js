@@ -17,6 +17,7 @@ import AddAReview from './DashBoard/AddAReview';
 import AddProduct from './DashBoard/AddProducts';
 import MakeAdmin from './DashBoard/MakeAdmin';
 import ManageProducts from './DashBoard/ManageProducts';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (

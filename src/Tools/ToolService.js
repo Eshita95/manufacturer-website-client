@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SharedButton from '../Shared/SharedButton';
+import SharedButton from '../Pages/Shared/SharedButton';
+
 
 const ToolService = ({ tool }) => {
     const { _id, img, name, description, quantity, price } = tool;
@@ -12,10 +13,10 @@ const ToolService = ({ tool }) => {
             </div>
             <div className=''>
                 <div>
-                    <h2><span className='font-bold text-secondary'>Name</span> : {name}</h2>
-                    <h2><span className='font-bold text-secondary'>Stocks</span> : {quantity}</h2>
-                    <p><span className='font-bold text-secondary'>Description</span> : {description}</p>
-                    <h2><span className='font-bold text-secondary'>Per quantity</span> : ${price}</h2>
+                    <h2><span className='font-bold'>Name</span> : {name}</h2>
+                    <h2><span className='font-bold'>Stocks</span> : {quantity}</h2>
+                    <p><span className='font-bold'>Description</span> : {description}</p>
+                    <h2><span className='font-bold'>Per quantity</span> : ${price}</h2>
                 </div>
                 <div className='mt-6'>
                     <Link to={`/toolsParts/${_id}`}><SharedButton>Order</SharedButton></Link>

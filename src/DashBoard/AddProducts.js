@@ -3,11 +3,10 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import SharedButton from '../Pages/Shared/SharedButton';
 
-
-const AddProduct = () => {
+const AddProducts = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const onSubmit = async (data) => {
-        const imageStorageKey = 'bd16e26ed4aab185593f7cc42b59b91a';
+        const imageStorageKey = '554340da0ae4107e57d6910247c7dbb5';
         const image = data.image[0];
         const formData = new FormData();
         formData.append('image', image);
@@ -21,22 +20,22 @@ const AddProduct = () => {
                 if (result.success) {
                     const img = result.data.url;
                     const addToolsParts = {
-                        name:data.name,
-                        description:data.description,
-                        quantity:data.quantity,
-                        price:data.price,
-                        sellQuantity:data.sellQuantity,
+                        name: data.name,
+                        description: data.description,
+                        quantity: data.quantity,
+                        price: data.price,
+                        sellQuantity: data.sellQuantity,
                         img: img
                     }
+                    console.log(addToolsParts)
                     // send to data base
-                    fetch('http://localhost:5000/addTools', {
-                        method: "POST",
-                        headers: {
-                            'content-type': 'application/json',
-                            authorization: `Bearer ${localStorage.getItem('accessToken')}`
-                        },
-                        body: JSON.stringify(addToolsParts)
-                    })
+                   fetch('http://localhost:5000/addParts',{
+                       method:"POST",
+                       headers:{
+                        'content-type': 'application/json'
+                       },
+                       body:JSON.stringify(addToolsParts)
+                   })
                         .then(res => res.json())
                         .then(inserted => {
                             if (inserted.insertedId) {
@@ -195,4 +194,4 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default AddProducts;

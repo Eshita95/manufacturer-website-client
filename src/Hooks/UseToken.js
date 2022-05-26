@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-const UseToken = user => {
+const useToken = user => {
     const [token, setToken] = useState('');
     useEffect(() =>{
-        const email = user?.user.email;
+        console.log('user inside token', user)
+        const email = user?.user?.email;
         const currentUser = {email:email};
         if(email){
             fetch(`http://localhost:5000/user/${email}`,{
@@ -25,4 +26,4 @@ const UseToken = user => {
     return [token, setToken];
 };
 
-export default UseToken;
+export default useToken;

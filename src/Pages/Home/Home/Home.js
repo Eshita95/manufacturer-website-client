@@ -1,17 +1,18 @@
 import React from 'react';
+import AddReviewDetails from '../../../DashBoard/AddReviewDetails';
+import Tools from '../../../Tools/Tools';
 import Banner from '../Banner/Banner';
 import BusinessSummery from '../BusinessSummery/BusinessSummery';
-import Partses from '../Partses/Partses';
-import Review from '../Review/Review';
+
 
 
 const Home = () => {
     return (
         <div className='px-12'>
             <Banner></Banner>
-            <Partses></Partses>
+            <Tools></Tools>
+            <AddReviewDetails></AddReviewDetails>
             <BusinessSummery></BusinessSummery>
-            <Review></Review>
         </div>
     );
 };

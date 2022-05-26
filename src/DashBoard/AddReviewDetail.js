@@ -11,9 +11,9 @@ const AddReviewDetail = ({ review }) => {
                             <img src={img} alt=''/>
                         </div>
                     </div>
-                    <h2><span className='text-secondary font-bold'>Name : </span>{name}</h2>
-                    <p><span className='text-secondary font-bold'>Review : </span>{description}</p>
-                    <p><span className='text-secondary font-bold'>Ratting : </span>{ratting}</p>
+                    <h2><span className='font-bold'>Name : </span>{name}</h2>
+                    <p><span className='font-bold'>Review : </span>{description}</p>
+                    <p><span className='font-bold'>Ratting : </span>{ratting}</p>
 
                     
                 </div>

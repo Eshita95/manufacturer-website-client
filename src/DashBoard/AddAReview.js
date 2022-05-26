@@ -7,7 +7,7 @@ import SharedButton from '../Pages/Shared/SharedButton';
 const AddAReview = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const onSubmit = async (data) => {
-        const imageStorageKey = 'bd16e26ed4aab185593f7cc42b59b91a';
+        const imageStorageKey = '554340da0ae4107e57d6910247c7dbb5';
         const image = data.image[0];
         const formData = new FormData();
         formData.append('image', image);
@@ -27,7 +27,7 @@ const AddAReview = () => {
                         img: img
                     }
                     // send to data base
-                    fetch('http://localhost:5000/addReview', {
+                    fetch('http://localhost:5000/getReview', {
                         method: "POST",
                         headers: {
                             'content-type': 'application/json',
@@ -57,7 +57,7 @@ const AddAReview = () => {
                 <div className='w-[370px] p-5 border-2 shadow-2xl rounded-xl'>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <h2 className='text-secondary font-bold text-center text-xl mb-3'>Add your Review</h2>
+                        <h2 className='font-bold text-center text-xl mb-3'>Add your Review</h2>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Your Photo</span>

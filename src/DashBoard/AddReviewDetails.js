@@ -16,7 +16,7 @@ const AddReviewDetails = () => {
     }, [])
     return (
         <div className=' border-2 rounded-lg mt-20'>
-            <h1 className='text-3xl font-bold text-secondary text-center mt-5'>Customer Review</h1>
+            <h1 className='text-3xl font-bold text-cyan-600 text-center mt-5'>Customer Review</h1>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5 gap-16'>
                 {
                     reviews.map(review => <AddReviewDetail
