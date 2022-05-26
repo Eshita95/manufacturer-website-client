@@ -53,13 +53,13 @@ const AddProduct = () => {
             })
     }
     return (
-        <div className='flex justify-center h-screen items-center'>
+        <div className='flex justify-center h-screen items-center my-20'>
             <div className=' '>
 
                 <div className='w-[370px] p-5 border-2 shadow-2xl rounded-xl'>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <h2 className='text-secondary font-bold text-center text-xl mb-3'>Add your Product</h2>
+                        <h2 className='font-bold text-center text-xl mb-3'>Add your Product</h2>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Your Photo</span>
