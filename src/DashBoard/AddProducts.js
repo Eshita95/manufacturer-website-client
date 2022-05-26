@@ -1,7 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import SharedButton from '../Shared/SharedButton';
+import SharedButton from '../Pages/Shared/SharedButton';
+
 
 const AddProduct = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();

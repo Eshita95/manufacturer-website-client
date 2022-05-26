@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import useToolsParts from '../hooks/useToolsParts';
-import SharedButton from '../Shared/SharedButton';
+import UseToolsParts from '../Hooks/UseToolsParts';
+import SharedButton from '../Pages/Shared/SharedButton';
+
 
 const ToolsAndPartsDetails = () => {
     const { toolsId } = useParams()
-    const [tools] = useToolsParts(toolsId)
+    const [tools] = UseToolsParts(toolsId)
     const { img, name, price, quantity, sellQuantity } = tools;
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
