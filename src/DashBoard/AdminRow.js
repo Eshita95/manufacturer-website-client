@@ -1,10 +1,10 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const AdminRow = ({ user,refetch}) => {
-    const { email } = user;
+const AdminRow = ({ user, refetch }) => {
+    const { email, role } = user;
     const makeAdmin = () => {
-        fetch(`/${email}`, {
+        fetch(`http://localhost:5000/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -28,7 +28,7 @@ const AdminRow = ({ user,refetch}) => {
         <tr>
             <td>1</td>
             <td>{email}</td>
-            <td><button onClick={makeAdmin}>Admin</button></td>
+            <td>{role !== 'admin' && <button className='btn' onClick={makeAdmin}>Admin</button>}</td>
         </tr>
 
     );
