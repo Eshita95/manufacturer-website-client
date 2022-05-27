@@ -30,7 +30,7 @@ const Signup = () => {
     }
 
     if(token){
-        navigate('/dashboard');
+        navigate('/');
     }
 
     if (loading || gLoading) {

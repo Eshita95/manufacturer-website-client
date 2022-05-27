@@ -5,8 +5,8 @@ import Navbar from './Pages/Shared/Navbar/Navbar';
 import Login from './Pages/Login/Login'
 import Footer from './Pages/Shared/Footer/Footer';
 import Blogs from './Pages/Home/Blogs/Blogs';
+import MyPortfolio from './Pages/Home/MyPortfolio/MyPortfolio';
 import SignUp from './Pages/Login/SignUp';
-import MyPortfolio from './Pages/Home/MyPortfolio/Myportfolio'
 import NotFound from './Pages/NotFound/NotFound';
 import RequireAuth from './Pages/Shared/RequireAuth';
 import ToolsAndPartsDetails from './Tools/ToolsAndPartsDetails';
@@ -18,6 +18,8 @@ import AddProduct from './DashBoard/AddProducts';
 import MakeAdmin from './DashBoard/MakeAdmin';
 import ManageProducts from './DashBoard/ManageProducts';
 import 'react-toastify/dist/ReactToastify.css';
+import MyProfile from './DashBoard/MyProfile';
+import User from './DashBoard/User';
 
 function App() {
   return (
@@ -26,7 +28,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+        <Route path='/myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='dashboard' element={
@@ -37,8 +39,10 @@ function App() {
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path='addReview' element={<AddAReview></AddAReview>}></Route>
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
+          <Route path='user' element={<User></User>}></Route>
           <Route path='makeAdmin' element={<MakeAdmin></MakeAdmin>}></Route>
           <Route path='manageProduct' element={<ManageProducts></ManageProducts>}></Route>
+          <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
         </Route>
         <Route path='/toolsParts/:toolsId' element={
           <RequireAuth>

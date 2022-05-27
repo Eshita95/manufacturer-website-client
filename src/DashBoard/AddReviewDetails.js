@@ -4,11 +4,11 @@ import AddReviewDetail from './AddReviewDetail';
 const AddReviewDetails = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/getReview',{
-            method:'GET',
-            headers:{
-                'content-type':'application/json',
-                authorization:`Bearer ${localStorage.getItem('accessToken')}`
+        fetch('http://localhost:5000/getReview', {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
             .then(res => res.json())
