@@ -3,6 +3,7 @@ import AddReviewDetails from '../../../DashBoard/AddReviewDetails';
 import Tools from '../../../Tools/Tools';
 import Banner from '../Banner/Banner';
 import BusinessSummery from '../BusinessSummery/BusinessSummery';
+import ContactUs from '../ContactUs';
 
 
 
@@ -13,6 +14,7 @@ const Home = () => {
             <Tools></Tools>
             <AddReviewDetails></AddReviewDetails>
             <BusinessSummery></BusinessSummery>
+            <ContactUs></ContactUs>
         </div>
     );
 };
