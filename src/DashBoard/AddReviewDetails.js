@@ -4,7 +4,7 @@ import AddReviewDetail from './AddReviewDetail';
 const AddReviewDetails = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/getReview', {
+        fetch(' https://aqueous-forest-62653.herokuapp.com/getReview', {
             method: 'GET',
             headers: {
                 'content-type': 'application/json',

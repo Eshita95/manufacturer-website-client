@@ -27,7 +27,7 @@ const AddAReview = () => {
                         img: img
                     }
                     // send to data base
-                    fetch('http://localhost:5000/addReview', {
+                    fetch(' https://aqueous-forest-62653.herokuapp.com/addReview', {
                         method: "POST",
                         headers: {
                             'content-type': 'application/json',

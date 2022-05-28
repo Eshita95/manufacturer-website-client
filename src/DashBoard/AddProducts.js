@@ -29,13 +29,13 @@ const AddProducts = () => {
                     }
                     console.log(addToolsParts)
                     // send to data base
-                   fetch('http://localhost:5000/addParts',{
-                       method:"POST",
-                       headers:{
-                        'content-type': 'application/json'
-                       },
-                       body:JSON.stringify(addToolsParts)
-                   })
+                    fetch(' https://aqueous-forest-62653.herokuapp.com/addParts', {
+                        method: "POST",
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        body: JSON.stringify(addToolsParts)
+                    })
                         .then(res => res.json())
                         .then(inserted => {
                             if (inserted.insertedId) {

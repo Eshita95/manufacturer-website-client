@@ -32,7 +32,7 @@ const MyProfile = () => {
                         img: img
                     }
                     // send to data base
-                    fetch(`http://localhost:5000/user/${email}`, {
+                    fetch(` https://aqueous-forest-62653.herokuapp.com/user/${email}`, {
                         method: "PUT",
                         headers: {
                             'content-type': 'application/json',
@@ -61,7 +61,7 @@ const MyProfile = () => {
                             </div>
                             <input className='border-2 p-2 rounded-lg border-cyan-400' type="text" disabled value={displayName} />
                             <input className='border-2 p-2 rounded-lg border-cyan-400' type="text" disabled value={email} />
-                            <input className='border-2 p-2 rounded-lg border-cyan-400' type="text" disabled  />
+                            <input className='border-2 p-2 rounded-lg border-cyan-400' type="text" disabled />
                             <h2>f</h2>
 
 

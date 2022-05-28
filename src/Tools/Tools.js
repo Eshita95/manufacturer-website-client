@@ -4,10 +4,10 @@ import ToolService from './ToolService';
 const Tools = () => {
     const [tools, setTools] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/getParts',{
-            method:'GET',
-            headers:{
-                'authorization':`Bearer ${localStorage.getItem('accessToken')}`
+        fetch(' https://aqueous-forest-62653.herokuapp.com/getParts', {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
             .then(res => res.json())

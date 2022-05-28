@@ -42,7 +42,7 @@ const ToolsAndPartsDetails = () => {
             quantity: data.quantity,
         }
         console.log(myOrder);
-        fetch('http://localhost:5000/order', {
+        fetch(' https://aqueous-forest-62653.herokuapp.com/order', {
             method: "POST",
             headers: {
                 'content-type': 'application/json',
@@ -81,7 +81,7 @@ const ToolsAndPartsDetails = () => {
 
                     <form onSubmit={handleSubmit(onSubmit)} action="">
                         <div className="form-control w-full max-w-xs">
-                           
+
                             <input
 
                                 type="number"
@@ -96,7 +96,7 @@ const ToolsAndPartsDetails = () => {
                             />
                         </div>
                         <div className="form-control w-full max-w-xs">
-                            
+
                             <input
 
                                 type="number"
