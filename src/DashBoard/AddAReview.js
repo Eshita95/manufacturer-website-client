@@ -21,13 +21,13 @@ const AddAReview = () => {
                 if (result.success) {
                     const img = result.data.url;
                     const addReview = {
-                        name:data.name,
-                        description:data.description,
-                        ratting:data.ratting,
+                        name: data.name,
+                        description: data.description,
+                        ratting: data.ratting,
                         img: img
                     }
                     // send to data base
-                    fetch('http://localhost:5000/getReview', {
+                    fetch('http://localhost:5000/addReview', {
                         method: "POST",
                         headers: {
                             'content-type': 'application/json',
