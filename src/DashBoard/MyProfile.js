@@ -61,6 +61,8 @@ const MyProfile = () => {
                             </div>
                             <input className='border-2 p-2 rounded-lg border-cyan-400' type="text" disabled value={displayName} />
                             <input className='border-2 p-2 rounded-lg border-cyan-400' type="text" disabled value={email} />
+                            <input className='border-2 p-2 rounded-lg border-cyan-400' type="text" disabled  />
+                            <h2>f</h2>
 
 
                         </div>
