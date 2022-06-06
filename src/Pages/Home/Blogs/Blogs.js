@@ -42,7 +42,7 @@ const Blogs = () => {
             <div className="card w-96 h-96 bg-base-100 shadow-xl m-4">
                 <div className="card-body">
                     <h2 className="card-title">5.  You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h2>
-                    <p><strong>Answer:</strong>Unit testing allows the programmer to refactor code at a later date, and make sure the module still works correctly (i.e. Regression testing). The procedure is to write test cases for all functions and methods so that whenever a change causes a fault, it can be quickly identified and fixed. </p>
+                    <p><strong>Answer:</strong>Unit testing allows the programmer to refactor code at a later date, and make sure the module still works correctly i.e. Regression testing. The procedure is to write test cases for all functions and methods so that whenever a change causes a fault, it can be quickly identified and fixed. </p>
 
                 </div>
             </div>
